@@ -10,6 +10,15 @@ function App() {
 
   const [allMenus, setAllMenus] = useState(menus);
   const [categories, setCategories] = useState(allCategories);
+  const filterMneus = (category) => {
+    if (category === "all") {
+      setAllMenus(menus);
+      return;
+    }
+    let filteredMenus = menus.filter((menu) => menu.category === category);
+    setAllMenus(filteredMenus);
+  };
+
   return (
     <main>
       <section className="menu section">
@@ -17,7 +26,7 @@ function App() {
           <h2>our menu</h2>
           <div className="underline"></div>
         </div>
-        <Categories categories={categories} />
+        <Categories categories={categories} filteredMenus={filterMneus} />
         <Menu allMenus={allMenus} />
       </section>
     </main>
