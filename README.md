@@ -1,4 +1,6 @@
-# Getting Started with Create React App
+# Project Title: Small Cafe Menu Application
+
+## Description: This project is a responsive web application designed for a small cafe, featuring various menu categories such as breakfast, lunch, and shake.
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
